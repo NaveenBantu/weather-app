@@ -7,4 +7,7 @@ export const getApiOptions = {
     }
 };
 
-export const GEO_API_URL = "https://wft-geo-db.p.rapidapi.com/v1/geo"
+export const GEO_API_URL = "https://wft-geo-db.p.rapidapi.com/v1/geo";
+
+export const WEATHER_API_KEY = "187a2eb3a2dc26c8e28892e521a4e18b";
+export const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5";
