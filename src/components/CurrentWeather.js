@@ -1,15 +1,19 @@
 import React from 'react'
+import { WEATHER_ICON_URL } from '../api'
 
 const CurrentWeather = ({ data }) => {
     return (
         <>
-            <div className='flex flex-col gap-2 bg-slate-300 m-4 p-4 w-2/5 shadow-lg rounded-md'>
+            <div className='flex flex-col gap-2 bg-slate-300 mx-auto p-4 w-2/5 shadow-lg rounded-md'>
                 {/* Header with City and Weather Conditions */}
-                <div className='bg-slate-500 text-white'>
-                    <h1 className='text-xl p-2'>
-                        {data.city}
-                    </h1>
-                    <p className='p-2'>{data.weather[0].description}</p>
+                <div className='flex justify-between bg-slate-500 text-white'>
+                    <div>
+                        <h1 className='text-xl p-2'>
+                            {data.city}
+                        </h1>
+                        <p className='p-2'>{data.weather[0].description}</p>
+                    </div>
+                    <img src={`${WEATHER_ICON_URL}/${data.weather[0].icon}@2x.png`} alt="weather" />
                 </div>
 
                 {/* Weather Temperature and Details */}
