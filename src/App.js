@@ -34,11 +34,13 @@ function App() {
 
   return (
     <>
-      <div className='flex flex-col gap-2 m-2'>
-        <h1 className='text-orange-400 font-semibold text-5xl p-5'> GetKlima </h1>
-        <Search
-          onSearchChange={handleOnSearchChange}
-        />
+      <div className='flex flex-col gap-2 bg-teal-500'>
+        <div className='flex justify-center items-center'>
+          <h1 className='text-blue-900 font-semibold text-5xl p-5'> GetKlima </h1>
+          <Search
+            onSearchChange={handleOnSearchChange}
+          />
+        </div>
         {currentWeather && <CurrentWeather data={currentWeather} />}
         {forecast && <Forecast data={forecast} />}
       </div>

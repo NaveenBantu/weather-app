@@ -37,6 +37,7 @@ const Search = ({ onSearchChange }) => {
                 value={search}
                 onChange={handleChange}
                 loadOptions={loadOptions}
+                className="w-1/2 mx-auto rounded-lg"
             />
         </>
     )
